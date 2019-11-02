@@ -14,10 +14,11 @@ namespace AkkaNet.Demo
             var system = ActorSystem.Create("SampleSystem");
             var greeter = system.ActorOf<GreetingActor>("greeter");
             greeter.Tell(new Greet{Message="Hello World"});
-            await Task.Delay(random.Next(2000,5000));
-            greeter.Tell(new Greet{Message="Hello World1"});
-            await Task.Delay(random.Next(2000,5000));
-            greeter.Tell(new Greet{Message="Hello World2"});
+            await Task.Delay(random.Next(500,3000));
+            greeter.Tell(new Greet{Message="Hello Boys"});
+            await Task.Delay(random.Next(500,3000));
+            greeter.Tell(new Greet{Message="Hello Girls "});
+            Console.WriteLine("Press any key to continue");
             Console.ReadLine();
         }
     }

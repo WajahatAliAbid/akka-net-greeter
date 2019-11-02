@@ -8,7 +8,7 @@ namespace AkkaNet.Demo.Actors
     {
         public GreetingActor()
         {
-            Receive<Greet>(greet=> Console.WriteLine(greet.Message));
+            Receive<Greet>(greet=> Console.WriteLine(greet.Message.ToUpper()));
         }
     }
 }
