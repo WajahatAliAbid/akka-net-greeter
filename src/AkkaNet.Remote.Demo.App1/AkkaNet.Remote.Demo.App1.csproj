@@ -9,5 +9,11 @@
   <ItemGroup>
     <ProjectReference Include="..\AkkaNet.Remote.Shared\AkkaNet.Remote.Shared.csproj" />
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <None Update="hocon.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
