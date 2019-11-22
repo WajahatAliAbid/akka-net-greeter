@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Akka.Configuration" Version="1.0.5835.36887" />
     <PackageReference Include="Akka.Remote" Version="1.4.0" />
   </ItemGroup>
 

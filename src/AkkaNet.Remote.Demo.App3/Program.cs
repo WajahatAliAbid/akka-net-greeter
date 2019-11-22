@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using Akka.Actor;
+using Akka.Configuration;
 
 namespace AkkaNet.Remote.Demo.App3
 {
@@ -6,7 +9,10 @@ namespace AkkaNet.Remote.Demo.App3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var conf = ConfigurationFactory.ParseString(File.ReadAllText("hocon.conf"));
+            var system = ActorSystem.Create("RemoteSystemB",conf);
+            system.ActorOf<ActorC>("actorC");
+            Console.ReadLine();
         }
     }
 }
